@@ -1,4 +1,4 @@
-# .bashrc
+# ~/.bashrc
 
 # Change umask to make directory sharing easier
 umask 0002
@@ -9,10 +9,10 @@ export HISTCONTROL=ignoredups
 # Increase history size to 1000 lines
 export HISTSIZE=1000
 
-# prepends time stamp to each history entry showing when the command was executed
+# Prepend time stamp to each history entry showing when the command was executed
 # export HISTTIMEFORMAT="%m/%d/%y %T "
 
-# Aliases I really like to use
+# Aliases
 # TODO: how to pull these out to separate file?
 
 # Credit: https://github.com/Bash-it/bash-it
@@ -37,5 +37,5 @@ alias code='echo Now in Code folder, which contains; cd ~/Google\ Drive/Code/; l
 alias chrome='open -a Google\ Chrome.app'
 
 
-# functions
-# source bash/functions.bash
+# Functions
+# TODO: same with aliases, how to pull out into separate file?
