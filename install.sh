@@ -33,7 +33,12 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OLDDIR="$(dirname $BASEDIR)"/dotfiles_old
 
 # List of files/folders to symlink in homedir
-FILES="bashrc bash_profile gitconfig"
+FILES2LN="bashrc bash_profile"
+
+# There are some settings in gitconfig that should be kept
+# private, so copying the source controlled file, AND THEN
+# adding the private config is the best way to go.
+FILES2COPY="gitconfig"
 
 ##########################################################
 #              DEFINE FUNCTIONS HERE
@@ -54,9 +59,9 @@ echo "Changing to the $BASEDIR directory"
 cd $BASEDIR
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory,
+# Move any existing dotfiles in ~ to dotfiles_old directory,
 # then create symlinks
-for FILE in $FILES; do
+for FILE in $FILES2LN; do
     if [ -e ~/.$FILE ]; then
       echo "Moving existing .$FILE from ~ to $OLDDIR"
       mv ~/.$FILE ~/Code/dotfiles_old/
@@ -64,5 +69,22 @@ for FILE in $FILES; do
     echo "Creating symlink to $FILE in home directory."
     ln -s $BASEDIR/$FILE ~/.$FILE
 done
+
+# Move any existing dotfiles in ~ to dotfiles_old directory,
+# then copy files
+for FILE in $FILES2COPY; do
+    if [ -e ~/.$FILE ]; then
+      echo "Moving existing .$FILE from ~ to $OLDDIR"
+      mv ~/.$FILE ~/Code/dotfiles_old/
+    fi
+    echo "Copying $FILE to home directory."
+    cp $BASEDIR/$FILE ~/.$FILE
+done
+
+# Source private config
+if [ -e private ]; then
+  echo "Enabling your private settings..."
+  source $BASEDIR/private
+fi
 
 # End of script
