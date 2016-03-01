@@ -1,8 +1,3 @@
-[user]
-	name = Hogan Lee
-	email = hogan@337studio.com
-[credential]
-	helper = osxkeychain
 [gui]
 	recentrepo = /Users/hogan/Google Drive/code/RickUmaliVanityWebsite
 [alias]
