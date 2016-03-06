@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#: Script      : args
+#: Date        : 2016-03-04
+#: Author      : Bash Guide
+#: Source      : http://mywiki.wooledge.org/WordSplitting
+#: Description : Outputs # of arguments and actual arguments passed to this
+#                script. This helps us understand how the shell performs word
+#                splitting.
+#: Options     : None
+#: Example     : $ args arg1 arg2 'A third arg' "A 4th arg"
+
+printf "%d args:" $#
+printf " <%s>" "$@"
+echo # newline
