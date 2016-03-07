@@ -1,5 +1,26 @@
 [gui]
 	recentrepo = /Users/hogan/Google Drive/code/RickUmaliVanityWebsite
+
 [alias]
+	# Common git aliases
+	# Thanks to: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+	br = branch
+	co = checkout
+	ci = commit
 	st = status
+
+	# See the very last commit
+	last = log -1 HEAD
+
+	# Prettier log
 	prettylog = log --pretty=format:\"%h - %ar, %an : %s\"
+
+	# Not sure why this isn't built into git
+	unstage = reset HEAD --
+
+[color]
+	ui = true
+
+[core]
+	editor = atom --wait
+	autocrlf = input
