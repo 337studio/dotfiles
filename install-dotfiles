@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
-# SCRIPT: setup-dotfiles
+# SCRIPT: install-dotfiles
 # AUTHOR: Hogan Lee
-# DATE:   02/29/2016
 #
 # PLATFORM: Mac OS X
 #
