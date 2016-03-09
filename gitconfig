@@ -25,4 +25,4 @@
 [include]
 	# Keep some Git settings private
 	# See: http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/
-	path = ~/.dotfiles/gitconfig_local
+	path = ~/.dotfiles/local/gitconfig_local
