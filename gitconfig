@@ -1,6 +1,3 @@
-[gui]
-	recentrepo = /Users/hogan/Google Drive/code/RickUmaliVanityWebsite
-
 [alias]
 	# Common git aliases
 	# Thanks to: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
@@ -9,7 +6,7 @@
 	ci = commit
 	st = status
 
-	# See the very last commit
+	# Most recent commit
 	last = log -1 HEAD
 
 	# Prettier log
@@ -24,3 +21,8 @@
 [core]
 	editor = atom --wait
 	autocrlf = input
+
+[include]
+	# Keep some Git settings private
+	# See: http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/
+	path = ~/.dotfiles/gitconfig_local
