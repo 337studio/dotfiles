@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# Install node modules tools using NPM.
+
+# IMPORTANT: Make sure to install Node is installed
+# before running this script.
+
+echo "Installing global node modules ..."
+
+# Update to latest npm; the syntax is a bit weird,
+# but this is how to do it
+npm install npm@latest -g
+
+# ===========================
+# Install global node modules
+# ===========================
+npm i handlebars -g
+npm i jshint -g
+npm i coffee-script -g
+npm i grunt -g
+npm i bower -g
+npm i less -g # command-line tool is `lessc`
+npm i jade -g
+npm i yo -g
+npm i nodemon -g
+npm i express -g
+npm i express-generator -g
+
+# Some house cleaning
+# npm
+
+echo "node modules installed."
+
+# Return a specific exit status
+exit 0
