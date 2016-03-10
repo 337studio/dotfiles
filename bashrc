@@ -10,5 +10,5 @@ fi
 
 # Functions
 if [ -e ~/.dotfiles/functions.bash ]; then
-    source ~/.dotfiles/aliases.bash
+    source ~/.dotfiles/functions.bash
 fi
