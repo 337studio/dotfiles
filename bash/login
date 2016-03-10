@@ -1,0 +1,29 @@
+# dotfiles/bash/login
+
+# Put environment variables here
+
+# Amend PATH; sourcing this file will not produce dupes, thanks to
+# the pathprepend/pathappend functions
+pathprepend '~/bin'
+pathprepend /usr/local/sbin
+pathprepend /usr/local/bin
+pathappend '~/.dotfiles/bin'
+
+# See: http://stackoverflow.com/questions/273909/how-do-i-manipulate-path-elements-in-shell-scripts
+# PATH=$(IFS=':';t=($PATH);unset IFS;t=(${t[@]%%*/usr/local/bin*});IFS=':';echo "${t[*]}");
+
+# Amend PATH
+# add2path '/usr/local/bin' front
+# add2path '/usr/local/sbin' front
+# add2path '~/bin' front
+# add2path '/usr/local/bin:/usr/local/sbin:~/bin' front
+# add2path '~/.dotfiles/bin'
+
+# Ignore dupes in command history
+export HISTCONTROL=ignoredups
+
+# Increase history size to 1000 lines
+export HISTSIZE=1000
+
+# Prepend time stamp to each history entry showing when the command was executed
+# export HISTTIMEFORMAT="%m/%d/%y %T "
