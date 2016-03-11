@@ -1,10 +1,12 @@
 # dotfiles/bash/login
 
-# Put environment variables here
+#########################
+# Environment Variables #
+#########################
 
 # Amend PATH; sourcing this file will not produce dupes, thanks to
 # the pathprepend/pathappend functions
-pathprepend '~/bin'
+pathprepend '~/bin' # prevent `~` expansion
 pathprepend /usr/local/sbin
 pathprepend /usr/local/bin
 pathappend '~/.dotfiles/bin'
