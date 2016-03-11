@@ -55,3 +55,8 @@ function listpath {
 ###############
 # Bash Prompt #
 ###############
+# See: https://gist.github.com/trey/2722934
+. /usr/local/etc/bash_completion.d/git-prompt.sh
+. /usr/local/etc/bash_completion.d/git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\W$(__git_ps1) \$ '
