@@ -9,10 +9,11 @@ alias ....='cd ../../..' # Go up three directories
 alias -- -='cd -'        # Go back
 
 # `ls` aliases
-alias lf='ls -F'       # `/` denotes directories; `*` denotes executables
-alias ld="ls -ld */"   # long form, only directories
-alias ll='ls -l'       # long form
-alias la='ls -la'      # long form + hidden files
+alias lf='ls -FG'       # `/` denotes directories; `*` denotes executables
+alias ld="ls -ldG */"   # long form, only directories
+alias ll='ls -lG'       # long form
+alias la='ls -laG'      # long form + hidden files
+alias l.='ls -G -d .*'  # only show dotfiles
 
 # better mneumonics
 alias search=grep
