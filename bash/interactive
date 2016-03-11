@@ -1,4 +1,6 @@
-# Aliases
+###########
+# Aliases #
+###########
 
 # Credit: https://github.com/Bash-it/bash-it
 alias ..='cd ..'         # Go up one directory
@@ -22,9 +24,9 @@ alias code='echo Now in Code folder, which contains; cd ~/Google\ Drive/Code/; l
 # Open in chrome
 alias chrome='open -a Google\ Chrome.app'
 
-
-# Functions
-# Common functions
+#############
+# Functions #
+#############
 
 function listpath {
   # save default IFS value
@@ -48,3 +50,7 @@ function listpath {
 
   IFS=$OLDIFS
 }
+
+###############
+# Bash Prompt #
+###############
