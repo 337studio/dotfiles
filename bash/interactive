@@ -59,4 +59,4 @@ function listpath {
 . /usr/local/etc/bash_completion.d/git-prompt.sh
 . /usr/local/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\W$(__git_ps1) \$ '
+export PS1='[\[\033[34m\]$(date +%H%M)\[\033[0m\]][\w]$(__git_ps1)\$ '
