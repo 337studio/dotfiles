@@ -36,6 +36,11 @@ files_to_copy="gitconfig"
 #              DEFINE FUNCTIONS HERE
 ##########################################################
 
+# Thanks Paul Irish
+# https://github.com/paulirish/dotfiles/blob/master/symlink-setup.sh
+print_success () {
+    printf "\e[1;36m  [✔] $1\e[0m\n"
+}
 
 ##########################################################
 #               BEGINNING OF MAIN
@@ -44,49 +49,49 @@ files_to_copy="gitconfig"
 # Check for existing ~/.dotfiles symlink first
 if [[ -h ~/.dotfiles ]] && [[ -d ~/.dotfiles ]]; then
   echo
-  echo "Found existing ~/.dotfiles symlink. Removing it first..."
   rm ~/.dotfiles
+  print_success "Found existing ~/.dotfiles symlink. Deleted it."
 fi
 
 # Symlink this project folder to ~
+# This is the most important step!
 ln -s "$dotfiles_dir" ~/.dotfiles
 
 # Create `dotfiles_old` to place backups into
 if [[ -d "$dotfiles_old" ]]; then
   echo
-  echo "$dotfiles_old already exists. Removing first..."
+  print_success "$dotfiles_old already exists. Deleted it."
 
   rm -rf "$dotfiles_old"
 fi
 
-printf "Creating '%s' for backup of any existing dotfiles in ~\n" $dotfiles_old
-mkdir "$dotfiles_old"
-printf "...done\n\n"
+echo
+mkdir "$dotfiles_old" &&
+print_success "Created '$dotfiles_old' \to backup any existing dotfiles in ~\n"
 
 # Move any existing dotfiles in ~ to dotfiles_old directory, then create
 # symlinks
 for file in $home_dir_symlinks; do
     if [ -e ~/.$file ]; then
-        printf "Moving existing .%s from ~ to %s\n" $file $dotfiles_old
-        mv ~/."$file" "$dotfiles_old"
+        mv ~/."$file" "$dotfiles_old" &&
+        print_success "Moved existing .$file from ~ to $dotfiles_old\n"
     fi
-    printf "Creating symlink to %s in ~.\n\n" $file
-    ln -s "$dotfiles_dir"/"$file" ~/."$file"
+    ln -s "$dotfiles_dir"/"$file" ~/."$file" &&
+    print_success "Created symlink to $file in ~.\n"
 done
 
 # Move any existing dotfiles in ~ to dotfiles_old directory, then copy files
 for file in $files_to_copy; do
     if [ -e ~/.$file ]; then
-        printf "Moving existing .%s from ~ to %s\n" $file $dotfiles_old
-        mv ~/."$file" "$dotfiles_old"
+        mv ~/."$file" "$dotfiles_old" &&
+        print_success "Moved existing .$file from ~ to $dotfiles_old\n"
     fi
-    printf "Copying %s to home directory.\n\n" $file
-    cp "$dotfiles_dir"/"$file" ~/."$file"
+    cp "$dotfiles_dir"/"$file" ~/."$file" &&
+    print_success "Copied $file to home directory.\n"
 done
 
 # Source .bash_profile again
-echo "Sourcing your ~/.bash_profile again. That's it, everything's setup!"
-echo
-. ~/.bash_profile
+source ~/.bash_profile
+print_success "Sourced your ~/.bash_profile again. That's it, everything's setup!\n"
 
 # End of script
