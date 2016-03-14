@@ -19,9 +19,6 @@ alias l.='ls -G -d .*'  # only show dotfiles
 alias search=grep
 alias whereami=pwd # since there's a `whoami` command, hehe
 
-# shortcut to my Google Drive/Code folder
-alias code='echo Now in Code folder, which contains; cd ~/Google\ Drive/Code/; ls -1'
-
 # Open in chrome
 alias chrome='open -a Google\ Chrome.app'
 
@@ -32,6 +29,26 @@ alias ff=firefox
 #############
 # Functions #
 #############
+
+# Shortcut to my Google Drive/Code folder
+function code-dir {
+  local code_dir="$HOME/Google Drive/code/"
+
+  cd "$code_dir" || return 1
+
+  printf "\nNow in code folder, which contains:\n\n"
+
+  # use `tree` if it's available
+  if hash tree 2>/dev/null; then
+    tree -CL 1 "$code_dir" # show only 1 level of depth
+  else
+    ls -G
+  fi
+
+  echo
+
+  return
+}
 
 function listpath {
   # save default IFS value
