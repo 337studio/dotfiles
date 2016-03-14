@@ -25,6 +25,10 @@ alias code='echo Now in Code folder, which contains; cd ~/Google\ Drive/Code/; l
 # Open in chrome
 alias chrome='open -a Google\ Chrome.app'
 
+# See: https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options#Mac_OS_X
+alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
+alias ff=firefox
+
 #############
 # Functions #
 #############
