@@ -90,8 +90,6 @@ for file in $files_to_copy; do
     print_success "Copied $file to home directory.\n"
 done
 
-# Source .bash_profile again
-source ~/.bash_profile
 print_success "That's it, everything's setup! Either start a new terminal or run \`. ~/.bash_profile.\`\n"
 
 # End of script
