@@ -92,6 +92,6 @@ done
 
 # Source .bash_profile again
 source ~/.bash_profile
-print_success "Sourced your ~/.bash_profile again. That's it, everything's setup!\n"
+print_success "That's it, everything's setup! Either start a new terminal or run \`. ~/.bash_profile.\`\n"
 
 # End of script
