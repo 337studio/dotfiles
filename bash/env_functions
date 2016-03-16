@@ -4,18 +4,20 @@ add2path() {
   if ! echo $PATH | egrep "(^|:)$1(:|\$)" > /dev/null ; then
 
     # Don't add a non existing directory to the PATH
-    # if [ -d "$1" ]; then
+    if [ -d "$1" ]; then
       if [ "$2" = front ]; then
         PATH="$1:$PATH"
       else
         PATH="$PATH:$1"
       fi
-    # fi
+    fi
   fi
 }
 
+# -------------------------------------------------------------
 # Functions below this point are from:
 # http://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+# -------------------------------------------------------------
 
 # Usage: indirect_expand PATH -> $PATH
 indirect_expand () {
