@@ -67,7 +67,7 @@ fi
 
 echo
 mkdir "$dotfiles_old" &&
-print_success "Created '$dotfiles_old' \to backup any existing dotfiles in ~\n"
+print_success "Created '$dotfiles_old' to backup any existing dotfiles in ~\n"
 
 # Move any existing dotfiles in ~ to dotfiles_old directory, then create
 # symlinks
