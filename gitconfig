@@ -19,7 +19,7 @@
 	ui = true
 
 [core]
-	editor = atom --wait
+	editor = vim
 	autocrlf = input
 
 [include]
