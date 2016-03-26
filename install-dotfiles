@@ -26,7 +26,7 @@ dotfiles_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 dotfiles_old="$(dirname $dotfiles_dir)/dotfiles_old"
 
 # Files/folders to symlink into home directory
-home_dir_symlinks="bashrc bash_profile"
+home_dir_symlinks="bashrc bash_profile vimrc"
 
 # Better to copy some files instead of symlinking them
 files_to_copy="gitconfig"
