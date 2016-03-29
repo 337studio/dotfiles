@@ -30,4 +30,7 @@ set shiftwidth=4
 "
 set smarttab
 
+" Display cursor position in lower right corner
+set ruler
+
 " End .vimrc
