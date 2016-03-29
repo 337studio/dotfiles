@@ -27,6 +27,9 @@ set shiftwidth=4
 "
 set smarttab
 
+" Display command in lower right corner
+set showcmd
+
 " Display cursor position in lower right corner
 set ruler
 
