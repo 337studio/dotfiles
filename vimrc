@@ -1,4 +1,6 @@
-" Enable syntax highlighting
+" Begin .vimrc
+
+" Syntax highlighting
 syntax on
 
 " Auto indent
@@ -27,3 +29,5 @@ set shiftwidth=4
 
 "
 set smarttab
+
+" End .vimrc
