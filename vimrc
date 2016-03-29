@@ -13,9 +13,6 @@ set hlsearch
 set number
 
 " # of columns occupied by tab character
-set tabstop=2
-
-" Max width of actual tab character
 set tabstop=8
 
 "
