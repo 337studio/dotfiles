@@ -33,4 +33,7 @@ set showcmd
 " Display cursor position in lower right corner
 set ruler
 
+" Searches should ignore case
+set ignorecase
+
 " End .vimrc
