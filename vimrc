@@ -45,6 +45,9 @@ set textwidth=79
 " Make % match angle brackets as well
 set matchpairs+=<:>
 
+" Make backspace work properly in Insert mode
+set backspace=indent,eol,start
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
