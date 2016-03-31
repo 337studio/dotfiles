@@ -39,4 +39,7 @@ set showcmd
 " Display cursor position in lower right corner
 set ruler
 
+" Automatic word wrapping
+set textwidth=79
+
 " End .vimrc
