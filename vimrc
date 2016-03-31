@@ -9,6 +9,12 @@ set autoindent
 " Highlight search results
 set hlsearch
 
+" Display search match while typing search pattern
+set incsearch
+
+" Searches should ignore case
+set ignorecase
+
 " Enable line numbers
 set number
 
@@ -32,8 +38,5 @@ set showcmd
 
 " Display cursor position in lower right corner
 set ruler
-
-" Searches should ignore case
-set ignorecase
 
 " End .vimrc
