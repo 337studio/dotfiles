@@ -42,6 +42,9 @@ set ruler
 " Automatic word wrapping
 set textwidth=79
 
+" Make % match angle brackets as well
+set matchpairs+=<:>
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
