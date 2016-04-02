@@ -66,4 +66,8 @@ function! HelpInNewTab ()
     endif
 endfunction
 
+" The following is thanks to Mastering Vim video
+" Make delete key in Normal mode remove highlighted searches
+nmap <silent>  <BS>  :nohlsearch<CR>
+
 " End .vimrc
