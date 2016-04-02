@@ -51,6 +51,12 @@ set matchpairs+=<:>
 " Make backspace work properly in Insert mode
 set backspace=indent,eol,start
 
+" Show all white space characters except for space
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+
+" Enable listchars above
+set list
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
