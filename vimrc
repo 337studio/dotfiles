@@ -4,6 +4,9 @@
 " BOOLEANS - Turn on the following
 " --------------------------------
 
+" Filetype detection, use plugin & indent files
+filetype plugin indent on
+
 " Syntax highlighting
 syntax on
 
