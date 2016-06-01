@@ -51,6 +51,17 @@ set matchpairs+=<:>
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" -------------
+" ABBREVIATIONS
+" -------------
+" Automatically fix common spelling errors; see :h abbreviations
+iab teh the
+iab tihs this
+iab thier their
+iab seperate separate
+iab alot a<Space>lot
+iab occassionally occasionally
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
