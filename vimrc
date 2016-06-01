@@ -4,6 +4,9 @@
 " BOOLEANS - Turn on the following
 " --------------------------------
 
+" Filetype detection, use plugin & indent files
+filetype plugin indent on
+
 " Syntax highlighting
 syntax on
 
@@ -62,6 +65,12 @@ iab seperate separate
 iab alot a<Space>lot
 iab occassionally occasionally
 
+" Show all white space characters except for space
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+
+" Enable listchars above
+set list
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
@@ -76,5 +85,9 @@ function! HelpInNewTab ()
         execute "normal \<C-W>T"
     endif
 endfunction
+
+" The following is thanks to Mastering Vim video
+" Make delete key in Normal mode remove highlighted searches
+nmap <silent>  <BS>  :nohlsearch<CR>
 
 " End .vimrc
