@@ -27,20 +27,21 @@ set number
 
 set smarttab
 
-" Spaces instead of tabs
-set expandtab
-
 " Incomplete command display in lower right corner
 set showcmd
 
 " Cursor position display in lower right corner
 set ruler
 
-" # of columns occupied by tab character
-set tabstop=8
+" Spaces instead of tabs
+set expandtab
 
-"
-set softtabstop=0
+" Set the following 3 options to the same #
+" # of columns occupied by tab character
+set tabstop=4
+
+" Spaces per tab
+set softtabstop=4
 
 " Size of indent
 set shiftwidth=4
@@ -54,6 +55,12 @@ set matchpairs+=<:>
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Show all white space characters except for space
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+
+" Enable listchars above
+set list
+
 " -------------
 " ABBREVIATIONS
 " -------------
@@ -64,12 +71,6 @@ iab thier their
 iab seperate separate
 iab alot a<Space>lot
 iab occassionally occasionally
-
-" Show all white space characters except for space
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
-
-" Enable listchars above
-set list
 
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
