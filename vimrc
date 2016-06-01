@@ -27,7 +27,7 @@ set smarttab
 " Spaces instead of tabs
 set expandtab
 
-" Command display in lower right corner
+" Incomplete command display in lower right corner
 set showcmd
 
 " Cursor position display in lower right corner
@@ -48,7 +48,7 @@ set textwidth=79
 " Make % match angle brackets as well
 set matchpairs+=<:>
 
-" Make backspace work properly in Insert mode
+" Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
 " The following is thanks to Mastering Vim video
