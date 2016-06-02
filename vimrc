@@ -91,4 +91,7 @@ endfunction
 " Make delete key in Normal mode remove highlighted searches
 nmap <silent>  <BS>  :nohlsearch<CR>
 
+" Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+
 " End .vimrc
