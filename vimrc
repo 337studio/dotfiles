@@ -94,4 +94,8 @@ nmap <silent>  <BS>  :nohlsearch<CR>
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
+" Use solarized (dark) colorscheme
+set background=dark
+colorscheme solarized
+
 " End .vimrc
