@@ -105,6 +105,7 @@ let maplocalleader = "\\"
 nmap <silent>  <BS>  :nohlsearch<CR>
 
 " Quickly open .vimrc in a split window
+" Thanks: http://learnvimscriptthehardway.stevelosh.com/chapters/07.html
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Quickly source an edited .vimrc file
