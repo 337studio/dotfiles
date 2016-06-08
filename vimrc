@@ -65,7 +65,10 @@ set list
 " ABBREVIATIONS
 " -------------
 " Automatically fix common spelling errors; see :h abbreviations
+iab adn and
+iab waht what
 iab teh the
+iab tehn then
 iab tihs this
 iab thier their
 iab seperate separate
