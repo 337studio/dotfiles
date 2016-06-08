@@ -87,9 +87,47 @@ function! HelpInNewTab ()
     endif
 endfunction
 
+" --------------------------------
+" CUSTOM MAPPINGS
+" --------------------------------
+
+" Set leader to <Space>
+let mapleader = "\<Space>"
+
+" Set local leader to backslash
+let maplocalleader = "\\"
+
 " The following is thanks to Mastering Vim video
 " Make delete key in Normal mode remove highlighted searches
 nmap <silent>  <BS>  :nohlsearch<CR>
+
+" Quickly open .vimrc in a split window
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+
+" Quickly source an edited .vimrc file
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Move a line down (hyphen)
+nnoremap <leader>- ddp
+
+" Move a line up (underscore)
+nnoremap <leader>_ dd2kp
+
+" Insert a blank line
+nnoremap <leader><Space> o<Esc>
+
+" Ctrl-j/k deletes blank line below/above, and <leader>j/k inserts
+" Thanks: http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines
+nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><leader>j :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><leader>k :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+" Convert word to uppercase (insert mode)
+inoremap <C-u> <Esc>vawUea
+
+" Convert word to uppercase (normal mode)
+nnoremap <leader><C-u> viwU
 
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
