@@ -75,6 +75,8 @@ iab seperate separate
 iab alot a<Space>lot
 iab occassionally occasionally
 
+iab @@ hogan@337studio.com
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
