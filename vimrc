@@ -102,6 +102,12 @@ let mapleader = "\<Space>"
 " Set local leader to backslash
 let maplocalleader = "\\"
 
+" Disable <Esc> to better train myself
+inoremap <Esc> <nop>
+
+" Easier way to exit Insert mode
+inoremap jk <Esc>
+
 " The following is thanks to Mastering Vim video
 " Make delete key in Normal mode remove highlighted searches
 nmap <silent>  <BS>  :nohlsearch<CR>
@@ -134,6 +140,24 @@ inoremap <C-u> <Esc>vawUea
 
 " Convert word to uppercase (normal mode)
 nnoremap <leader><C-u> viwU
+
+" Wrap a word in double quotes
+nnoremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
+
+" Wrap a word in single quotes
+nnoremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
+
+" Wrap a word in backticks
+nnoremap <leader>` viw<Esc>a`<Esc>hbi`<Esc>lel
+
+" Wrap visually selected text in double quotes
+vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
+
+" Use H as alias for 0
+nnoremap H 0
+
+" Use L as alias for $
+nnoremap L $
 
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
