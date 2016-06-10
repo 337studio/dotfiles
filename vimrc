@@ -114,6 +114,15 @@ augroup filetype_javascript
     autocmd FileType javascript :iab <buffer> iff if ()<left>
 augroup END
 
+" Mappings for Markdown files
+augroup filetype_markdown
+    autocmd!
+    autocmd FileType markdown :ono ih
+        \ :<C-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<CR>
+    autocmd FileType markdown :ono ah
+        \ :<C-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<CR>
+augroup END
+
 " --------------------------------
 " CUSTOM MAPPINGS
 " --------------------------------
