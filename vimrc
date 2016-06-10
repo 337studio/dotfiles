@@ -77,6 +77,10 @@ iab occassionally occasionally
 
 iab @@ hogan@337studio.com
 
+" --------------------------------
+" AUTO COMMANDS
+" --------------------------------
+
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
 augroup HelpInTabs
@@ -87,10 +91,28 @@ augroup END
 " Only apply to help files...
 function! HelpInNewTab ()
     if &buftype == 'help'
-        "Convert the help window to a tab...
+        " Convert the help window to a tab...
         execute "normal \<C-W>T"
     endif
 endfunction
+
+" Options/mappings for HTML files
+augroup filetype_html
+    autocmd!
+    autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+augroup END
+
+" Options/mappings for python files
+augroup filetype_python
+    autocmd!
+    autocmd FileType python     :iab <buffer> iff if:<left>
+augroup END
+
+" Options/mappings for JavaScript files
+augroup filetype_javascript
+    autocmd!
+    autocmd FileType javascript :iab <buffer> iff if ()<left>
+augroup END
 
 " --------------------------------
 " CUSTOM MAPPINGS
