@@ -190,6 +190,19 @@ nnoremap H 0
 " Use L as alias for $
 nnoremap L $
 
+" Status Line --------------------------------------------------------------------- {{{
+" Always show statusline
+set laststatus=2
+
+set statusline=[Buf:\ %-3n]    " Buffer number
+set statusline+=\ %t           " File name
+set statusline+=\ %y           " File type
+set statusline+=%=             " Switch to right side
+set statusline+=%-8.(%l,%c%V%) " Simulate ruler
+set statusline+=/              " Separator
+set statusline+=%L             " Total lines
+" }}}
+"
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
