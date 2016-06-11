@@ -62,17 +62,17 @@ set list
 " Abbreviations ----------------------------------------------------------- {{{
 
 " Automatically fix common spelling errors; see :h abbreviations
-iab adn and
-iab waht what
-iab teh the
-iab tehn then
-iab tihs this
-iab thier their
-iab seperate separate
-iab alot a<Space>lot
-iab occassionally occasionally
+iabbrev adn and
+iabbrev waht what
+iabbrev teh the
+iabbrev tehn then
+iabbrev tihs this
+iabbrev thier their
+iabbrev seperate separate
+iabbrev alot a<Space>lot
+iabbrev occassionally occasionally
 
-iab @@ hogan@337studio.com
+iabbrev @@ hogan@337studio.com
 
 " }}}
 
