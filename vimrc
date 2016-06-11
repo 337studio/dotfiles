@@ -99,25 +99,25 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" Options/mappings for HTML files
+" HTML file settings
 augroup filetype_html
     autocmd!
     autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
 augroup END
 
-" Options/mappings for python files
+" Python file settings
 augroup filetype_python
     autocmd!
     autocmd FileType python     :iab <buffer> iff if:<left>
 augroup END
 
-" Options/mappings for JavaScript files
+" JavaScript file settings
 augroup filetype_javascript
     autocmd!
     autocmd FileType javascript :iab <buffer> iff if ()<left>
 augroup END
 
-" Mappings for Markdown files
+" Markdown file settings
 augroup filetype_markdown
     autocmd!
     autocmd FileType markdown :ono ih
