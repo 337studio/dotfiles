@@ -1,8 +1,4 @@
-" Begin .vimrc
-
-" --------------------------------
-" BOOLEANS - Turn on the following
-" --------------------------------
+" General settings -------------------------------------------------------- {{{
 
 " Filetype detection, use plugin & indent files
 filetype plugin indent on
@@ -61,9 +57,10 @@ set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
 " Enable listchars above
 set list
 
-" -------------
-" ABBREVIATIONS
-" -------------
+" }}}
+
+" Abbreviations ----------------------------------------------------------- {{{
+
 " Automatically fix common spelling errors; see :h abbreviations
 iab adn and
 iab waht what
@@ -77,9 +74,9 @@ iab occassionally occasionally
 
 iab @@ hogan@337studio.com
 
-" --------------------------------
-" AUTO COMMANDS
-" --------------------------------
+" }}}
+
+" Auto commands ----------------------------------------------------------- {{{
 
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
@@ -123,9 +120,9 @@ augroup filetype_markdown
         \ :<C-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<CR>
 augroup END
 
-" --------------------------------
-" CUSTOM MAPPINGS
-" --------------------------------
+" }}}
+
+" Mappings ---------------------------------------------------------------- {{{
 
 " Set leader to <Space>
 let mapleader = "\<Space>"
@@ -190,7 +187,10 @@ nnoremap H 0
 " Use L as alias for $
 nnoremap L $
 
-" Status Line --------------------------------------------------------------------- {{{
+" }}}
+
+" Status Line ------------------------------------------------------------- {{{
+
 " Always show statusline
 set laststatus=2
 
@@ -201,8 +201,11 @@ set statusline+=%=             " Switch to right side
 set statusline+=%-8.(%l,%c%V%) " Simulate ruler
 set statusline+=/              " Separator
 set statusline+=%L             " Total lines
+
 " }}}
-"
+
+" Plugins, etc ------------------------------------------------------------ {{{
+
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
@@ -210,4 +213,4 @@ execute pathogen#infect()
 set background=dark
 colorscheme solarized
 
-" End .vimrc
+" }}}
