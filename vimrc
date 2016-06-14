@@ -1,4 +1,4 @@
-" General settings -------------------------------------------------------- {{{
+" General settings {{{
 
 " Filetype detection, use plugin & indent files
 filetype plugin indent on
@@ -59,7 +59,7 @@ set list
 
 " }}}
 
-" Abbreviations ----------------------------------------------------------- {{{
+" Abbreviations {{{
 
 " Automatically fix common spelling errors; see :h abbreviations
 iabbrev adn and
@@ -76,7 +76,7 @@ iabbrev @@ hogan@337studio.com
 
 " }}}
 
-" Auto commands ----------------------------------------------------------- {{{
+" Auto commands {{{
 
 " The following is thanks to Mastering Vim video
 " Only apply to .txt files...
@@ -93,11 +93,12 @@ function! HelpInNewTab ()
     endif
 endfunction
 
-" Vimscript file settings
+" Vimscript file settings {{{
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+" }}}
 
 " HTML file settings
 augroup filetype_html
@@ -128,7 +129,7 @@ augroup END
 
 " }}}
 
-" Mappings ---------------------------------------------------------------- {{{
+" Mappings {{{
 
 " Set leader to <Space>
 let mapleader = "\<Space>"
@@ -195,7 +196,7 @@ nnoremap L $
 
 " }}}
 
-" Status Line ------------------------------------------------------------- {{{
+" Status Line {{{
 
 " Always show statusline
 set laststatus=2
@@ -210,7 +211,7 @@ set statusline+=%L             " Total lines
 
 " }}}
 
-" Plugins, etc ------------------------------------------------------------ {{{
+" Plugins, etc {{{
 
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
