@@ -194,6 +194,9 @@ nnoremap H 0
 " Use L as alias for $
 nnoremap L $
 
+" Expansion of active file directory
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " }}}
 
 " Status Line {{{
