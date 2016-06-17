@@ -29,7 +29,7 @@ set showcmd
 " Cursor position display in lower right corner
 set ruler
 
-" Spaces instead of tabs
+" Always use spaces instead of tabs
 set expandtab
 
 " Set the following 3 options to the same #
@@ -39,7 +39,7 @@ set tabstop=4
 " Spaces per tab
 set softtabstop=4
 
-" Size of indent
+" Size of indent in normal mode
 set shiftwidth=4
 
 " Automatic word wrapping
