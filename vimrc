@@ -204,13 +204,14 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Always show statusline
 set laststatus=2
 
-set statusline=[Buf:\ %-3n]    " Buffer number
-set statusline+=\ %t           " File name
-set statusline+=\ %y           " File type
-set statusline+=%=             " Switch to right side
-set statusline+=%-8.(%l,%c%V%) " Simulate ruler
-set statusline+=/              " Separator
-set statusline+=%L             " Total lines
+set statusline=[Buf:\ %-3n]      " Buffer number
+set statusline+=\ %t             " File name
+set statusline+=\ %y             " File type
+set statusline+=%=               " Switch to right side
+set statusline+=[Line:\ %l\ of   " Current line
+set statusline+=\ %L]            " Total lines
+set statusline+=\ [Col:\ %c%V]   " Column number
+set statusline+=\ [%P]           " % through file
 
 " }}}
 
