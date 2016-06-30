@@ -52,7 +52,7 @@ set matchpairs+=<:>
 set backspace=indent,eol,start
 
 " Show all white space characters except for space
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,nbsp:+
 
 " Enable listchars above
 set list
