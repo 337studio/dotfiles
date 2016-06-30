@@ -57,6 +57,9 @@ set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
 " Enable listchars above
 set list
 
+" Disable warnings for unwritten buffers
+set hidden
+
 " }}}
 
 " Abbreviations {{{
