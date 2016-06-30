@@ -192,10 +192,10 @@ nnoremap <leader>` viw<Esc>a`<Esc>hbi`<Esc>lel
 vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
 
 " Use H as alias for 0
-nnoremap H 0
+" nnoremap H 0
 
 " Use L as alias for $
-nnoremap L $
+" nnoremap L $
 
 " Expansion of active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
