@@ -249,6 +249,12 @@ function! SummarizeTabs()
     endtry
 endfunction
 
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+" Thanks: https://github.com/tpope/vim-sensible
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
+
 " Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
