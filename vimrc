@@ -1,3 +1,10 @@
+" File: .vimrc
+" Author: Hogan Lee
+
+" Use pathogen to install plugins
+" See: https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+
 " General settings {{{
 
 " Filetype detection, use plugin & indent files
@@ -254,9 +261,6 @@ endfunction
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
-
-" Use pathogen to install plugins; see https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
 
 " Use solarized (dark) colorscheme
 set background=dark
