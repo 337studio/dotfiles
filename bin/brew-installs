@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## Install command-line tools using Homebrew.
+# Install command-line tools using Homebrew.
 
 # IMPORTANT: Make sure to install Homebrew before running this script!!
 
@@ -36,7 +36,7 @@ brew install ack
 
 # MEAN stack tools
 brew install node # comes w/npm
-brew install heroku-toolbelt # need to install Foreman separately
+brew install heroku
 brew install mongodb
 
 # Remove outdated versions from the cellar
