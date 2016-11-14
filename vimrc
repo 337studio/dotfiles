@@ -1,9 +1,32 @@
 " File: .vimrc
 " Author: Hogan Lee
 
-" Use pathogen to install plugins
-" See: https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+" Vundle settings {{{
+"
+" The following lines are required in order for Vundle to work properly
+" See: https://github.com/VundleVim/Vundle.vim
+set nocompatible
+filetype off " will be turned on again after vundle stuff
+
+"set the runtime path to include and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" List of plugins
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'sjl/vitality.vim'
+
+" All Plugins must be added before the following line
+call vundle#end()
+
+" }}}
 
 " General settings {{{
 
