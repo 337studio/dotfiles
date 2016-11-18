@@ -22,6 +22,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'sjl/vitality.vim'
+Plugin 'Yggdroot/indentLine'
 
 " All Plugins must be added before the following line
 call vundle#end()
@@ -82,7 +83,7 @@ set matchpairs+=<:>
 set backspace=indent,eol,start
 
 " Show all white space characters except for space
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,nbsp:+
+set listchars=eol:¬,tab:\┆\ ,trail:~,extends:>,precedes:<,nbsp:+
 
 " Enable listchars above
 set list
