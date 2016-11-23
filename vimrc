@@ -15,14 +15,28 @@ call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-" List of plugins
+" Fuzzy finder
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" File tree to supplement vim's buffer list
 Plugin 'scrooloose/nerdtree'
+
+" Solarized colors, yay
 Plugin 'altercation/vim-colors-solarized'
+
+" Shortcuts for commenting code
 Plugin 'tpope/vim-commentary'
+
+" Tim Pope's sweet git plugin
 Plugin 'tpope/vim-fugitive'
+
+" Tim Pope's sweet surround plugin
 Plugin 'tpope/vim-surround'
+
+" Cursor fixes for iTerm
 Plugin 'sjl/vitality.vim'
+
+" Add lines to help visualize indents
 Plugin 'Yggdroot/indentLine'
 
 " All Plugins must be added before the following line
@@ -291,6 +305,7 @@ endif
 set background=dark
 colorscheme solarized
 
+" Tell CtrlP plugin to exclude files in gitignore file
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " }}}
