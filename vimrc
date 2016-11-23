@@ -39,6 +39,10 @@ Plugin 'sjl/vitality.vim'
 " Add lines to help visualize indents
 Plugin 'Yggdroot/indentLine'
 
+" Souped-up status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " All Plugins must be added before the following line
 call vundle#end()
 
@@ -307,5 +311,8 @@ colorscheme solarized
 
 " Tell CtrlP plugin to exclude files in gitignore file
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Enable powerline fonts in airline
+let g:airline_powerline_fonts = 1
 
 " }}}
