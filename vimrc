@@ -39,6 +39,11 @@ Plugin 'sjl/vitality.vim'
 " Add lines to help visualize indents
 Plugin 'Yggdroot/indentLine'
 
+" Vim markdown plugin
+" See: https://github.com/plasticboy/vim-markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 " Souped-up status line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
