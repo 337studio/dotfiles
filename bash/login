@@ -29,3 +29,6 @@ export HISTSIZE=1000
 
 # Prepend time stamp to each history entry showing when the command was executed
 # export HISTTIMEFORMAT="%m/%d/%y %T "
+
+# Launch rbenv automatically
+eval "$(rbenv init -)"
