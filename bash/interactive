@@ -25,6 +25,7 @@ alias chrome='open -a Google\ Chrome.app'
 # See: https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options#Mac_OS_X
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias ff=firefox
+alias npmglobals='npm list -g --depth=0'
 
 #############
 # Functions #
