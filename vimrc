@@ -40,9 +40,8 @@ Plugin 'sjl/vitality.vim'
 Plugin 'Yggdroot/indentLine'
 
 " Vim markdown plugin
-" See: https://github.com/plasticboy/vim-markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+" See: https://github.com/tpope/vim-markdown
+Plugin 'tpope/vim-markdown'
 
 " Souped-up status line
 Plugin 'vim-airline/vim-airline'
