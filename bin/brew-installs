@@ -33,10 +33,11 @@ brew install vim --override-system-vi
 brew install python
 brew install python3
 
-# Other must-haves
+# Other must-haves for me
 brew install tree
 brew install git
 brew install ack
+brew install grip # GitHub flavored md converter
 
 # Amazon web services CLI
 brew install awscli
