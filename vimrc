@@ -47,6 +47,12 @@ Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Syntax checking plugin
+" Plugin 'vim-syntastic/syntastic'
+
+" Textile syntax highlighting
+Plugin 'timcharper/textile.vim'
+
 " All Plugins must be added before the following line
 call vundle#end()
 
@@ -321,5 +327,11 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 " Enable powerline fonts in airline
 let g:airline_powerline_fonts = 1
+
+" Defaults for syntastic plugin
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
 
 " }}}
