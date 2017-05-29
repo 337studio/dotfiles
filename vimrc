@@ -263,9 +263,11 @@ vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
 " Expansion of active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" Open sidebar with NERDTree
+" Open NERDTree sidebar
 nnoremap <leader>[ :NERDTree<CR>
 
+" Close NERDTree sidebar
+nnoremap <leader>] :NERDTreeClose<CR>
 
 " }}}
 
