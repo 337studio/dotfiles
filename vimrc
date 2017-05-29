@@ -72,8 +72,8 @@ set incsearch
 " Case-insensitive searches, but only when pattern is all-lowercase
 set ignorecase smartcase
 
-" Line numbers
-set number
+" Relative line numbers
+set relativenumber
 
 set smarttab
 
