@@ -120,6 +120,9 @@ set list
 " Disable warnings for unwritten buffers
 set hidden
 
+" Always show statusline
+set laststatus=2
+
 " }}}
 
 " Abbreviations {{{
@@ -263,21 +266,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Open sidebar with NERDTree
 nnoremap <leader>[ :NERDTree<CR>
 
-" }}}
-
-" Status Line {{{
-
-" Always show statusline
-set laststatus=2
-
-set statusline=[Buf:\ %-3n]      " Buffer number
-set statusline+=\ %t             " File name
-set statusline+=\ %y             " File type
-set statusline+=%=               " Switch to right side
-set statusline+=[Line:\ %l\ of   " Current line
-set statusline+=\ %L]            " Total lines
-set statusline+=\ [Col:\ %c%V]   " Column number
-set statusline+=\ [%P]           " % through file
 
 " }}}
 
