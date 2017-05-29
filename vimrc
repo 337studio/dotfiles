@@ -254,7 +254,11 @@ nnoremap <leader>` viw<Esc>a`<Esc>hbi`<Esc>lel
 " Wrap visually selected text in double quotes
 vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
 
+" Autofix entire buffer with eslint_d:
+" nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F
 
+" Autofix visual selection with eslint_d:
+" vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv
 
 " Expansion of active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
