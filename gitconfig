@@ -9,6 +9,9 @@
 	# Most recent commit
 	last = log -1 HEAD
 
+	# Last 5 commits
+	last5 = log -5 --pretty --oneline
+
 	# Prettier log
 	prettylog = log --pretty=format:\"%h - %ar, %an : %s\"
 
