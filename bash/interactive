@@ -2,30 +2,7 @@
 # Aliases #
 ###########
 
-# Credit: https://github.com/Bash-it/bash-it
-alias ..='cd ..'         # Go up one directory
-alias ...='cd ../..'     # Go up two directories
-alias ....='cd ../../..' # Go up three directories
-alias -- -='cd -'        # Go back
-
-# `ls` aliases
-alias lf='ls -FG'       # `/` denotes directories; `*` denotes executables
-alias ld="ls -ldG */"   # long form, only directories
-alias ll='ls -lG'       # long form
-alias la='ls -laG'      # long form + hidden files
-alias l.='ls -G -d .*'  # only show dotfiles
-
-# better mneumonics
-alias search=grep
-alias whereami=pwd # since there's a `whoami` command, hehe
-
-# Open in chrome
-alias chrome='open -a Google\ Chrome.app'
-
-# See: https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options#Mac_OS_X
-alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
-alias ff=firefox
-alias npmglobals='npm list -g --depth=0'
+. ~/.dotfiles/bash/bash_aliases
 
 #############
 # Functions #
