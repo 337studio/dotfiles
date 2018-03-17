@@ -254,6 +254,18 @@ nnoremap <leader>` viw<Esc>a`<Esc>hbi`<Esc>lel
 " Wrap visually selected text in double quotes
 vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
 
+" When indenting a visual selection, keep selected text highlighted
+vnoremap > >gv
+
+" Same as above, but outdenting
+vnoremap < <gv
+
+" Map <tab> key to do same as > in visual mode
+vnoremap <Tab> >gv
+
+" Map <shift + tab> to do same as < in visual mode
+vnoremap <S-Tab> <gv
+
 " Autofix entire buffer with eslint_d:
 " nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F
 
