@@ -28,3 +28,6 @@ alias npmglobals='npm list -g --depth=0'
 alias mongod='brew services run mongodb-community'
 alias mongod-status='brew services list'
 alias mongod-stop='brew services stop mongodb-community'
+
+# open current directory in VS code =)
+alias ovs='open -a Visual\ Studio\ Code.app .'
