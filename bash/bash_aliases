@@ -22,3 +22,9 @@ alias chrome='open -a Google\ Chrome.app'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias ff=firefox
 alias npmglobals='npm list -g --depth=0'
+
+# shortcuts for starting up MongoDB server
+# since v4.2.3, brew services is recommended approach
+alias mongod='brew services run mongodb-community'
+alias mongod-status='brew services list'
+alias mongod-stop='brew services stop mongodb-community'
